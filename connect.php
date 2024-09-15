@@ -3,7 +3,7 @@
 	$lastName = $_POST['lastName'];
 
 	// Database connection
-	$conn = new mysqli('localhost','root','','demo');
+	$conn = new mysqli('dbramsayz.mysql.database.azure.com','ramsayz','Chinnu@778','ramsayz');
 	if($conn->connect_error){
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
