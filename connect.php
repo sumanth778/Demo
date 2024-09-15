@@ -4,7 +4,7 @@
 	$host = "dbramsayz.mysql.database.azure.com";
 	$username = "ramsayz";
 	$password = "Chinnu@778";
-	$database = "dbramsayz";
+	$database = "demo";
 
 	// Database connection
 	$conn = new mysqli($host, $username, $password, $database);
