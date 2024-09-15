@@ -5,9 +5,10 @@
 	$username = "ramsayz";
 	$password = "Chinnu@778";
 	$database = "demo";
+	$port = 3306;
 
 	// Database connection
-	$conn = new mysqli($host, $username, $password, $database);
+	$conn = new mysqli($host, $username, $password, $database, $port);
 	if($conn->connect_error){
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
