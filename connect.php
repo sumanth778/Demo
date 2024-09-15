@@ -1,9 +1,13 @@
 <?php
 	$firstName = $_POST['firstName'];
 	$lastName = $_POST['lastName'];
+	$host = "dbramsayz.mysql.database.azure.com";
+	$username = "ramsayz";
+	$password = "Chinnu@778";
+	$database = "dbramsayz";
 
 	// Database connection
-	$conn = new mysqli('dbramsayz.mysql.database.azure.com','ramsayz','Chinnu@778','dbramsayz');
+	$conn = new mysqli($host, $username, $password, $database);
 	if($conn->connect_error){
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
@@ -12,7 +16,7 @@
 		$stmt->bind_param("iss", $id, $firstName, $lastName);
 		$execval = $stmt->execute();
 		echo $execval;
-		echo "Registration successfully...";
+		echo "Registration successful...";
 		$stmt->close();
 		$conn->close();
 	}
