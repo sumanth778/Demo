@@ -12,8 +12,8 @@
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("insert into registration(firstname, lastname) values(?, ?)");
-		$stmt->bind_param("ss", $firstname, $lastname);
+		$stmt = $conn->prepare("insert into registration(id, firstname, lastname) values(?, ?, ?)");
+		$stmt->bind_param("iss",$id, $firstname, $lastname);
 		$execval = $stmt->execute();
 		echo $execval;
 		echo "Registration successful...";
