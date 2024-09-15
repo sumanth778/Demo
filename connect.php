@@ -1,6 +1,6 @@
 <?php
-	$firstName = $_POST['firstName'];
-	$lastName = $_POST['lastName'];
+	$firstname = $_POST['firstname'];
+	$lastname = $_POST['lastname'];
 	$host = "dbramsayz.mysql.database.azure.com";
 	$username = "ramsayz@dbramsayz";
 	$password = "Chinnu@778";
@@ -12,8 +12,8 @@
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("insert into registration(id,firstName, lastName) values(?, ?, ?)");
-		$stmt->bind_param("iss", $id, $firstName, $lastName);
+		$stmt = $conn->prepare("insert into registration(firstname, lastname) values(?, ?)");
+		$stmt->bind_param("ss", $firstname, $lastname);
 		$execval = $stmt->execute();
 		echo $execval;
 		echo "Registration successful...";
