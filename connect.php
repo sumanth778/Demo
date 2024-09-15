@@ -2,7 +2,7 @@
 	$firstName = $_POST['firstName'];
 	$lastName = $_POST['lastName'];
 	$host = "dbramsayz.mysql.database.azure.com";
-	$username = "ramsayz";
+	$username = "ramsayz@dbramsayz";
 	$password = "Chinnu@778";
 	$database = "demo";
 
