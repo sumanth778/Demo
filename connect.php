@@ -23,7 +23,7 @@
     }
 
     // Prepare and bind the SQL statement
-    $stmt = $conn->prepare("INSERT INTO registration (id, firstName, lastName) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO registration (firstName, lastName) VALUES (?, ?)");
     if (!$stmt) {
         die('Prepare failed: (' . $conn->errno . ') ' . $conn->error);
     }
